@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.heading {
+    display: block;
+    font-size: 80px;
+    font-weight: 600;
+    color: #5272F2;
+    margin-top: 14%;
+    margin-left: 12%;
+    font-style: italic;
+
+}
+
+span {
+    color: #F8BDEB;
+    font-size: 60px;
+    margin-left: 10%;
+    display: block;
+
+}
+
+.text {
+    height: 48px;
+    width: 550px;
+    margin-top: 5px;
+    margin-left: 175px;
+    border-radius: 19px;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+
+
+    box-shadow: 7px 8px 7px transparent;
+
+}
+
+#pwd {
+    height: 43px;
+    width: 90%;
+    border-radius: 19px;
+    outline: 0;
+
+    font-size: larger;
+    
+}
+
+.copy{
+   font-size: 30px;
+   float: right;
+   padding-right: 15px;
+   padding-top: 10px;
+   color: #0802A3;
+}
+#submit{
+   
+    height: 37px;
+    width: 100px;
+    border-radius: 12px;
+    border: 0;
+    outline: 0;
+    margin-left: 177px;
+    margin-top: 15px;
+    font-size: larger;
+    background-color: rgb(4, 132, 4);
+    color: aliceblue;
+}
+@media (max-width: 600px) {
+    body{
+        background-image: url('background-phone.jpg');
+        background-size: cover;
+        background-repeat:repeat-y;
+      
+     
+    }
+    .heading{
+        font-size: 60px;
+    }
+   span{
+    font-size: 50px;
+   }
+   .text{
+    margin-left: 5px;
+    width: 98%;
+   }
+   #pwd{
+    width: 86%;
+   }
+   .copy{
+    padding-left: 2px;
+   }
+   #submit{
+    margin-left: 140px;
+   }
+}

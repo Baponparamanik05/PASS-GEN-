@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Password Generator</title>
+</head>
+
+<body onload="clearTextbox()">
+    <div>
+        <h2 class="heading">Generate <span>your Password </span></h2>
+    </div>
+    <div class="text">
+        <input type="text" id="pwd" placeholder="Password">
+        <i class="fa-regular fa-copy copy" onclick="copyPassword()"></i>
+    </div>
+
+    <button id="submit" onclick="create()">Generate</button>
+    <script>
+        let copy = document.getElementsByClassName("copy");
+        function clearTextbox() {
+            document.getElementById("pwd").value = "";
+        }
+        function randomNumber(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function create() {
+            const capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const small = "abcdefghijklmnopqrstuvwxyx";
+            const number = "1234567890";
+            const special = "!@#$%^&*+-/";
+            const limit = 12;
+            let Password = "";
+
+            let Passwordbox = document.getElementById("pwd");
+            while (Password.length <= limit) {
+                Password += capital[randomNumber(0, 25)] + small[randomNumber(0, 25)] + number[randomNumber(0, 9)] + special[randomNumber(0, 10)];
+            }
+
+
+            Passwordbox.value = Password;
+        }
+        function copyPassword() {
+            const Passwordbox = document.getElementById("pwd"); 
+            Passwordbox.select();
+            document.execCommand("copy");
+            alert("Password is copied!!");
+ }
+
+    </script>
+</body>
+
+</html>
